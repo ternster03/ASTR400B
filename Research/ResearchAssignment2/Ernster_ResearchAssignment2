@@ -1,0 +1,60 @@
+\documentclass{aastex7}
+\newcommand{\vdag}{(v)^\dagger}
+\newcommand\aastex{AAS\TeX}
+\newcommand\latex{La\TeX}
+
+\begin{document}
+\title{The Evolution of the Velocity-Dispersion Profile of Dark Matter Particles in the Halo of M33}
+
+\author{Tugg Ernster}
+\affiliation{University of Arizona}
+\email{ternster@arizona.edu}
+
+\section{Introduction}
+The topic of this study focuses on the tidal evolution of dark matter in satellite galaxies, specifically examining how the kinematics of dark matter halos evolve under external tidal forces from host galaxies. The interaction between the host and satellite galaxy can have a significant effect on the structure of the dark matter halo of the satellite galaxy, and since galaxies are defined by having a large component of their mass in the form of dark matter (\cite{FrenkWhite_2012}), understanding how dark matter evolves helps us better understand the galaxy as a whole. These tidal forces affect the dark matter distribution and therefore, the velocity-dispersion profile of the particles. The velocity distribution can help us understand how the distributions of both dark matter and baryonic matter change within the satellite galaxy under external influences of a host galaxy, as well as provide insight into the nature of dark matter itself.
+
+Understanding the evolution of dark matter halos in satellite galaxies helps our broader understanding of galaxy evolution. Dark matter not only contributes most of the galaxy's mass, but its behavior also influences how galaxies form and evolve. In context of a host and satellite galaxy, how satellite interacts with larger structures. Tidal interactions can lead to, namely, mass loss of the satellite as well as changes in the internal dynamics of dark matter halos (\cite{Wolf_2010}), which could lead to disruption of the very structure of the galaxy itself. Studying these effects helps us understand how galaxy assembly occurs, the histories of potential mergers and the overall impact of tidal forces on the growth and transformation of galaxies. Specifically, these interactions can help create better models of galaxy formation as whole. 
+
+As our satellite galaxies orbit the host galaxy, tidal forces cause stripping of mass, namely dark matter, although baryonic matter is also lost. This can be seen in Figure 1 (\cite{Wang_2022}), where over time most of the matter is getting stripped from the satellite galaxy, where now today, almost no dark matter is present. It also shows that these stripping events occur in waves, or periodically and that there are differences in the percentage of matter being stripped between baryonic and dark matter.
+
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Research_Assignment2_photo.jpg}
+    \caption{Shows the dark matter, baryonic matter, and the ratio of the two over a period of 4.7 Gyr's of Sagittarius dwarf spheroidal galaxy, a satellite of the Milky Way Galaxy. The top line shows the aforementioned three graphs at a radius of 5 kpc of its center and the bottom line at a radius of 2 kpc.  }
+    \label{Figure 1}
+\end{figure}
+
+\vspace{1 em}
+
+
+ It is important to understand how the velocity dispersion within the inner dark matter due to its association with the stability and survival of the satellite itself. Questions such as does the velocity dispersion within the half-mass radius of the dark matter halo increase or decrease as the galaxy is tidally stripped? Or how does the Jacobi radius evolve over time within the satellite? Overall, how does tidal stripping affect overall stability of the halo?
+
+\section{Proposal}
+
+\subsection{This Proposal}
+My question that I will be answering will be how the average velocity dispersion of dark matter particles evolves over time within the half-mass radius of the M33 halo.
+
+\subsection{Methods}
+The first calculation would be obtaining the velocity dispersion or $\sigma$. This value can be calculated using the standard deviation formula by first calculating the mean velocity and then the squared average deviation from the mean:
+
+\begin{equation}
+V_{mean} = \frac{1}{N}\sum_{i}^Nv_i
+\end{equation}
+\begin{equation}
+\sigma = \sqrt{\frac{1}{N}\sum_{i}^N(v_i-V_{mean})^2}
+\end{equation}
+
+Next, I would need to calculate the half-mass radius of each galaxy, which can be described by summing the mass at increasing radii and once I get to half of the total mass, that is the radius. This could be achieved by obtaining the radius of each particle in the simulation, then summing the mass of all the particles contained within the radius. By taking steps out from the center of our galaxy, we would continue until we got to half of our total mass. Naturally, this is going to change overtime due to the nature of the process we are investigating, so doing this at different time steps will naturally allow us to show how the velocity distribution changes, as well as the mass. We can obtain all of this information directly from our simulation, and I would want to use all of the snapshots before the merging of the Milky Way and M31, and possibly after as the simulation shows M33 is not merged when the other galaxies do. This can partially be shown as in Figure 2, with a plot of the average velocity dispersion of the satellite galaxy and another of the distance of the satellite from its host galaxy. I would want to plot the velocity dispersion specifically within the half-mass radius rather than the entire galaxy and perhaps show how the half-mass radius changes over time as well. 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.33\linewidth]{Research_Assignment2_3_photo.jpg}
+    \caption{This figure is taken from \cite{Wang_2022}, and displays the average-velocity dispersion, distance, and number of massive particles over a small period of time of the satellite galaxy Sagittarius around the Milky Way galaxy for two types of simulated data and from analytic formulas.}
+    \label{Figure 2}
+\end{figure}
+
+\subsection{Hypothesis}
+I propose that overtime, the amount of dark matter in the system will decrease periodically. This periodicity is caused by the orbit of the satellite around the host galaxy and throughout this periodicity, the velocity distribution within the half-mass radius will undergo periods of increasing velocity, while generally the trend of the velocity will decrease over time. As dark matter is stripped from the outside of the dark matter halo, the dark matter will become more concentrated near the center of the satellite or within the half-mass radius itself, causing this increase in velocity dispersion. However, mass is still lost, so overtime the total velocity dispersion will decrease, and so will the velocity dispersion within the half-mass radius. I think this will occur because naturally, overtime if you lose mass within a system, you are losing energy. If you lose energy, you will lose velocity. The reason of the peaks in velocity distribution initially are due to a loss of gravitational potential energy from this loss of outer mass in the satellite, which condenses the mass towards the center of the satellite, so within that area, there will be a spike in average velocity dispersion.
+\bibliography{sample7}{}
+\bibliographystyle{aasjournalv7}
+\end{document}
+
