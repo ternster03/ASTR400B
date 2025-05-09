@@ -1,0 +1,142 @@
+\documentclass{aastex7}
+\newcommand{\vdag}{(v)^\dagger}
+\newcommand\aastex{AAS\TeX}
+\newcommand\latex{La\TeX}
+\usepackage{float}
+
+\begin{document}
+\title{The Evolution of the Velocity-Dispersion Profile of Dark Matter Particles in the Halo of M33}
+\small
+\author{Tugg Ernster}
+\affiliation{University of Arizona}
+\email{ternster@arizona.edu}
+\noindent\keywords{dark matter halo --- Jacobi radius --- tidal stripping --- satellite galaxies --- velocity dispersion}
+
+\begin{abstract}
+\small
+Satellite galaxies that are gravitationally bound to a host galaxy experience tidal interactions that can influence their dark matter halo. Understanding how the dark matter halos within these galaxies evolve can reveal how galaxies evolve at large. In this study, a N body simulation was used as the way to probe this investigation. We will discuss how the velocity dispersion within the Jacobi radius of the satellite galaxy M33's dark matter halo changes over time as well as how its Jacobi radius changes overtime. The velocity dispersion within the Jacobi radius of the dark matter halo of M33 is cyclical, with periods of contraction and expansion by tidal stripping and that the Jacobi radius of M33 initially slowly decreases until the collision of M31 and the Milky Way Galaxy, then undergoing a cyclical expansion and contraction as well. These findings indicate that tidal stripping can drive significant changes in the dark matter halo of satellite galaxies.
+\end{abstract}
+
+\section{Introduction}
+The topic of this study focuses on the tidal evolution of dark matter in \textbf{satellite galaxies}, galaxies that are gravitationally bound to a larger host galaxy. We are specifically examining how the kinematics of \textbf{dark matter halos}, a region surrounding the visible part of a galaxy that interacts through gravity,  evolve under external tidal forces from host galaxies. The interaction between the host and satellite galaxy can have a significant effect on the structure of the dark matter halo of the satellite galaxy, and since galaxies are defined by having a large component of their mass in the form of dark matter (\cite{FrenkWhite_2012}), understanding how dark matter evolves helps us better understand the galaxy as a whole. These tidal forces affect the dark matter distribution and therefore, the velocity-dispersion profile of the particles. The velocity distribution can help us understand how the distributions of both dark matter and baryonic matter change within the satellite galaxy under external influences of a host galaxy, as well as provide insight into the nature of dark matter itself.
+
+\vspace{1 em}
+
+A galaxy is defined as a gravitationally bound set of stars whose properties cannot
+be explained by a combination of baryons (gas, dust and stars) and
+Newton’s laws of gravity. These galaxies can undergo structural changes from internal or external sources, known as galaxy evolution and understanding the evolution of the dark matter halos of galaxies, specifically satellite galaxies helps our broader understanding of galaxy evolution. Dark matter not only contributes most of the galaxy's mass, but its behavior also influences how galaxies form and evolve. In context of a host and satellite galaxy, how satellite interacts with larger structures. Tidal interactions, namely \textbf{tidal stripping} or when a host galaxy takes stellar matter from a satellite galaxy,  can lead to mass loss of the satellite as well as changes in the internal dynamics of dark matter halos (\cite{Wolf_2010}), which could lead to disruption of the very structure of the galaxy itself. Studying these effects helps us understand how galaxy assembly occurs, the histories of potential mergers and the overall impact of tidal forces on the growth and transformation of galaxies. Specifically, these interactions can help create better models of galaxy formation as whole. 
+
+\vspace{1 em}
+
+As our satellite galaxies orbit the host galaxy, tidal forces cause stripping of mass, namely dark matter, although baryonic matter is also lost. This can be seen in Figure 1 (\cite{Wang_2022}), where over time most of the matter is getting stripped from the satellite galaxy, where now today, almost no dark matter is present. It also shows that these stripping events occur in waves, or periodically and that there are differences in the percentage of matter being stripped between baryonic and dark matter.
+
+\vspace{1 em}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Research_Assignment2_photo.jpg}
+    \caption{Shows the dark matter, baryonic matter, and the ratio of the two over a period of 4.7 Gyr's of Sagittarius dwarf spheroidal galaxy, a satellite of the Milky Way Galaxy. The top line shows the aforementioned three graphs at a radius of 5 kpc of its center and the bottom line at a radius of 2 kpc. This figure shows that stripping occurs in waves, and the stripping occurs on both dark and baryonic matter,however, this stripping occurs at different rates.}
+    \label{Figure 1}
+\end{figure}
+
+\vspace{1 em}
+
+
+ It is important to understand how the velocity dispersion within the inner dark matter due to its association with the stability and survival of the satellite itself. Questions such as does the velocity dispersion within the \textbf{Jacobi Radius}, the radius at which the gravitational influence of both the host and satellite galaxy are equal, of the dark matter halo increases or decreases as the galaxy is tidally stripped? Or how does the Jacobi radius evolve over time within the satellite? Overall, how does tidal stripping affect overall stability of the dark matter halo of a satellite galaxy? This final question is studied in (\cite{Dooley_2016}), which simulated how a Milky Way-like host galaxy would affect the structure of different types of satellite galaxies.
+
+\section{This Project}
+
+In this paper, we will determine how the average velocity dispersion of the dark matter halo of M33 evolves over time within it's Jacobi Radius and how that Jacobi Radius itself changes over time.
+
+\vspace{1 em}
+
+This paper will answer how the velocity dispersion within the Jacobi Radius of the dark matter halo changes, how the Jacobi radius evolves of the dark matter halo of the satellite evolves over time, and through these findings, how the stability of the dark matter halo is affected by tidal stripping.
+
+\vspace{1 em}
+
+Understanding the impact of tidal stripping on satellite galaxies is important for expanding our understanding of dark matter itself. This is crucial because through interactions between the host and satellite galaxy, we can see how the dark matter halo of the satellite is affected through the parameters we are investigating. Through our desired study, we can quantify the effects of the interacting dark matter. This can help us better understand the mechanisms that drive satellite disruption and how these mechanisms are affected through tidal stripping.
+
+
+\section{Methodology}
+The simulations used in this study are based on N-body models of M31. These models are composed of two main components: a base galaxy model representing M31 itself, and a GSS component derived from a  N-body simulation of a satellite galaxy’s disruption (\cite{van_der_Marel_2012}). N-body simulations refer to the methods used to study the  evolution of complex systems with many gravitationally interacting particles. Each particle in the simulation represents a mass element, and the gravitational interactions between these elements are computed over time to see how the system evolves.
+
+\vspace{1 em}
+
+The approach to these questions are to use the N body simulation to investigate how M33's dark matter halo is distrubed by M31, its host galaxy. This will be done using the halo particles of each respective galaxy and all calculations will be done solely with these particles in mind. The resolution used was the VLowRes.
+
+\vspace{1 em}
+The first calculation would be obtaining the \textbf{velocity dispersion} or $\sigma$. This value can be calculated using the standard deviation formula by first calculating the mean velocity, Vmean (km/s) from the use of N bodies, or number of particles, and then obtaining the squared average deviation (km/s) from the mean:
+
+\begin{equation}
+V_{mean} = \frac{1}{N}\sum_{i}^Nv_i
+\end{equation}
+\begin{equation}
+\sigma = \sqrt{\frac{1}{N}\sum_{i}^N(v_i-V_{mean})^2}
+\end{equation}
+
+Next, I would need to calculate the Jacobi radius. This could be achieved by obtaining the radius of each particle in the simulation, then summing the mass of all the particles contained within the Jacobi radius:  
+\begin{equation}
+R_j = r \left( \frac{m_{\text{sat}}}{2 m_{\text{host}}} \right)^{1/3}
+\end{equation}
+
+where Rj is the Jacobi radius (kpc), r is the distance from M33 and M31 (kpc), msat is the mass of the satellite of M33 (Msun), and mhost is the mass of M31 (kpc). Naturally, this is going to change overtime due to the nature of the process we are investigating, so doing this at different time steps will naturally allow us to show how the velocity distribution changes, as well as the mass within the Jacobi radius. We can obtain all of this information directly from our simulation, and I would want to use all of the snapshots before the merging of the Milky Way and M31, and possibly after as the simulation shows M33 is not merged when the other galaxies do. This can partially be shown as in Figure 2, with a plot of the average velocity dispersion of the satellite galaxy and another of the distance of the satellite from its host galaxy. I would want to plot the velocity dispersion specifically within the Jacobi radius rather than the entire galaxy and perhaps show how the Jacobi radius changes over time as well. 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.33\linewidth]{Research_Assignment2_3_photo.jpg}
+    \caption{This figure is taken from \cite{Wang_2022}, and displays the average-velocity dispersion, distance, and number of massive particles over a small period of time of the satellite galaxy Sagittarius around the Milky Way galaxy for two types of simulated data and from analytic formulas.}
+    \label{Figure 2}
+\end{figure}
+\vspace{1 em}
+
+The plots I will create will show the velocity dispersion within the Jacboi Radius over time and a plot of the Jacobi Radius itself changes overtime. These plots will serve to answer how the velocity dispersion within the Jacobi radius changes over time, and how the Jacobi radius changes over time.
+
+\vspace{1 em}
+I propose that overtime, the amount of dark matter in the system will decrease periodically. This periodicity is caused by the orbit of the satellite around the host galaxy and throughout this periodicity, the velocity distribution within the Jacobi radius will undergo periods of increasing velocity, while generally the trend of the velocity will decrease over time. As dark matter is stripped from the outside of the dark matter halo, the dark matter will become more concentrated near the center of the satellite or within the Jacobi radius itself, causing this increase in velocity dispersion. However, mass is still lost, so overtime the total velocity dispersion will decrease, and so will the velocity dispersion within the Jacobi radius. I think this will occur because naturally, overtime if you lose mass within a system, you are losing energy. If you lose energy, you will lose velocity. The reason of the peaks in velocity distribution initially are due to a loss of gravitational potential energy from this loss of outer mass in the satellite, which condenses the mass towards the center of the satellite, so within that area, there will be a spike in average velocity dispersion.
+
+\section{Results}
+The first figure created was the velocity dispersion within the Jacobi radius (km/s) of M33 over time (Myr). The plot shows a cyclical nature of the velocity dispersion overtime, with a distinct peak around the time in our simulation when M31 and the Milk Way galaxy collide. This is then followed by a period of cyclical increase and decrease in velocity dispersion over time. It shows that the velocity dispersion is cyclical with periods of contraction and expansion of M33 by tidal stripping.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.33\linewidth]{Research_Assignment6_photo1.png}
+    \caption{This figure is taken from my code, and displays the average velocity dispersion (km/s) overtime (Myr). The blue dots correlate to a time in the future. This plot shows the predicted cyclical nature of the velocity dispersion within M33, going through periods of increased and decreased speeds.}
+    \label{Figure 3}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.30\linewidth]{Screenshot 2025-04-29 225646.png}
+    \caption{This figure is taken from my code, and displays how the Jacobi radius(kpc) changes over time (Myr). The red line correlate to a time in the future. This plot shows the gradual tidal stripping of M33 halo from M31 overtime, and how that stripping is interrupted through the interaction of M31 and the Milky Way Galaxy.}
+    \label{Figure 4}
+\end{figure}
+The second figure displays how the Jacobi radius (kpc) changes over time. As we can see the Jacobi radius steadily decreases overtime as M31 and M33 draw closer together, with their respective masses remaining the same.However, as M31 and the Milky Way Galaxy collide, the radius begins to increase and decrease, as M31 and Milky Way perform a dance around one another and their respective masses begin to interact with one another greatly. This displays the gradual degradation of the Jacobi radius as M31 and M33 travel closer together and how when M31 and the Milky Way Galaxy collide, the cyclical nature of the Jacobi radius through the interaction of M31 and the Milk Way's matter. 
+
+\section{Discussion}
+As discussed in the results of the average velocity dispersion over time, the velocity dispersion displays a cyclical increase and decrease overtime as well as the Jacobi radius gradually becoming smaller overtime as M31 and M33 travel closer together and how the radius begins cyclically alternating between periods of expansion and contraction, due to its interaction from the collided M31 and the Milky Way. This matches well part of our hypothesis, that being that as material is being stripped away from M33 by M31, the velocity dispersion within the Jacobi radius will go through periods of contraction and expansion. As material is stripped away initially, the overall potential energy of the M33 halo structure decreases, leading to particles "falling" closer to the galaxies center, or more material being concentrated with the Jacobi radius. This causes an increase in velocity dispersion, but mass is still being lost due to the ever present tidal stripping, which can be seen initially. However, when the Milky Way Galaxy and M31 get close enough, they begin to strip so much material from M33, that an abundant amount of material is contracted inside the Jacobi radius, leading to the large spike in average velocity dispersion at roughly 4.5 Byr, with the Jacobi radius itself being relatively small compared to other times within the plot. However, the velocity dispersion does not show a general decrease in value, due to the collision of M31 and M33, in contrast to our hypothesis.
+
+\vspace{1 em}
+Our results shown in this paper do agree in part to the hypothesis displayed in (\cite{Wolf_2010}), which argues that the structure of the dark matter of a satellite galaxy can be disrupted by its host galaxy. This is shown in part in Figure 3, through the interaction of M33, M31, and the Milky Way galaxy interaction as M31 and the Milky Way initially collide, the velocity dispersion increases dramatically, which indicates a massive ejection of material from the Jacobi radius of M33 itself. This can be seen in Figure 1, as the dark matter mass is decreasing within the Jacobi radius as material is being stripped by the larger host. This result shows that a host galaxy is able to effectively disrupt the dark matter kinematics within a satellite galaxy through tidal stripping and in addition, its collision with another similarly sized galaxy.
+\vspace{1 em}
+The uncertainties with my analysis are with how the masses of the system are treated. The particles in the simulation are never changed from being a blank galaxy particle, meaning the particles of M33 may actually be closer to M31, which we can of course say doesn't matter anyway because of our definition of the Jacobi radius itself. However, I think this fails to consider the considerable impact of the Milky Way- M31 collision, as it would have a great impact on our results, even simply looking at the mass actually acting on M33 not being stagnant. To provide a better analysis, use of the Milky Way's dark halo mass or simply a combination of M31 and the Milky Way's halo mass could be sufficient. Additionally, to better support the findings, showing the amount of original M33 dark matter halo particles within the Jacobi radius could better support the hypothesis as a whole.
+
+\section{Conclusion}
+Satellite galaxies that are gravitationally bound to a host galaxy experience tidal interactions that can influence their dark matter halo. Understanding how the dark matter halos within these galaxies evolve can reveal how galaxies evolve at large. In this study, a N body simulation was used as the way to probe this investigation. We will discuss how the velocity dispersion within the Jacobi radius of the satellite galaxy M33's dark matter halo changes over time as well as how its Jacobi radius changes overtime. 
+\vspace{1 em}
+
+Through the analysis of the velocity dispersion within the Jacobi radius of M33's dark matter halo, it was found to have periodic behavior, though not gradually decreasing overtime. This is in agreement to (\cite{Wolf_2010}), which states that host galaxies can cause disruption to the interal structure of dark matter halo's in satellite galaxies through tidal stripping. This is somewhat in agreement with my hypothesis with the velocity dispersion undergoing periodic behavior, however, there was no clear sign of a general decrease in velocity dispersion overtime, and thus the amount of dark matter within the Jacobi radius changing overtime as well.
+\vspace{1 em}
+
+For future analysis, I would like to actually try to plot how the dark matter within the Jacobi radius changed overtime directly, rather than using the velocity dispersion as a prob. I think that would strengthen my argument and potentially strengthen the argument of the usage of the velocity dispersion as a means to say how the dark matter is changing itself. Using a higher resolution could potentially slightly alter the result. Another potential change woud be through the use of a effective mass of M31 and the Milky Way. I solely assumed M33 as the host galaxy, but after the merger of the two galaxies, this could skew my representation of my velocity dispersion and of the Jacobi radius and by creating this effective mass, improve my analysis.
+
+\section{Acknowledgements}
+
+I would like to thank and acknowledge Matan Lagnado and Colton Quirk for helping troubleshoot my code and to the individuals behind the software used in this project: 
+\vspace{1 em}
+
+\texttt{astropy} \citep{astropy:2013, astropy:2018, astropy:2022}, \texttt{Jupyter} \citep{2007CSE.....9c..21P, kluyver2016jupyter}, \texttt{matplotlib} \citep{Hunter:2007}, \texttt{numpy} \citep{numpy}, \texttt{python} \citep{python}, and \texttt{scipy} \citep{2020SciPy-NMeth, scipy_15366870}.
+
+Software citation information aggregated using \texttt{\href{https://www.tomwagg.com/software-citation-station/}{The Software Citation Station}} \citep{software-citation-station-paper, software-citation-station-zenodo}.
+
+\bibliography{sample7}{}
+\bibliographystyle{aasjournalv7}
+\end{document}
+
